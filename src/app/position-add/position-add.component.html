@@ -1,0 +1,16 @@
+<div class="header-container">
+  <h2>Dodaj stanowisko</h2>
+</div>
+
+<div class="content-container">
+  <div class="position-create-container">
+    <form (ngSubmit)="f.form.valid && create()" #f="ngForm" action="">
+      <input class="input-component" type="text" placeholder="Stanowisko" name="positionName" [(ngModel)]="position.positionName"
+        #positionName="ngModel" required [ngClass]="{ 'red-border-class': f.submitted && positionName.errors }">
+
+      <button [disabled]="loading" class="custom-button">
+        Zatwierdź
+      </button>
+    </form>
+  </div>
+</div>

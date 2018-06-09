@@ -1,0 +1,31 @@
+.header-container {
+    text-align: center;
+    background: #2885C4;
+    padding: 5px 0;
+}
+
+.content-container {
+    padding: 20px;
+    background-color: #57B3F1;
+    overflow: hidden;
+}
+
+.record-container {
+    background: #3FA0E1;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.centered-container {
+    margin: auto;
+    width: 70%;
+}
+
+.emp-container {
+    background: #3FA0E1;
+    margin-left: 40px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}

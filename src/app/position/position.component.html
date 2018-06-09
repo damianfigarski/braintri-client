@@ -1,0 +1,16 @@
+<div class="header-container">
+  <h2>Lista stanowisk</h2>
+</div>
+
+<div class="content-container">
+  <div class="centered-container" [@positions]="positions">
+    <div *ngFor="let position of positions">
+      <div class="record-container">
+        {{ position.positionName }} - Ilość pracowników na tym stanowisku: {{ position.employeeList.length }}
+      </div>
+      <div class="emp-container" *ngFor="let employee of position.employeeList">
+        {{ employee.firstName }} {{ employee.lastName }} @: {{ employee.email }}
+      </div>
+    </div>
+  </div>
+</div>

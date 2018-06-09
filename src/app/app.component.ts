@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  companyName = 'braintri';
+  static API_URL = 'https://shielded-hollows-49238.herokuapp.com';
 }

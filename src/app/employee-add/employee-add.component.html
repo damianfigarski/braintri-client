@@ -1,0 +1,37 @@
+<div class="header-container">
+  <h2>Dodaj pracownika</h2>
+</div>
+
+<div class="content-container">
+  <div class="centered-container">
+    <form (ngSubmit)="f.form.valid && create()" #f="ngForm" action="">
+      <div class="input-container">
+        <input class="input-component" type="text" placeholder="Imię" name="firstName" [(ngModel)]="employee.firstName" #firstName="ngModel"
+          required [ngClass]="{ 'red-border-class': f.submitted && firstName.errors }">
+      </div>
+
+      <div class="input-container">
+        <input class="input-component" type="text" placeholder="Nazwisko" name="lastName" [(ngModel)]="employee.lastName" #lastName="ngModel"
+          required [ngClass]="{ 'red-border-class': f.submitted && lastName.errors }">
+      </div>
+
+      <div class="input-container">
+        <input class="input-component" type="text" placeholder="Email" name="email" [(ngModel)]="employee.email" #email="ngModel"
+          required pattern="[A-za-z0-9\.\-\_]+@[A-Za-z0-9]+\.[A-Za-z]{2,4}" [ngClass]="{ 'red-border-class': f.submitted && email.errors }">
+      </div>
+
+      <div class="invalid-mail-container" *ngIf="f.submitted && email.errors && email.errors.pattern">
+        Format adresu email jest nieprawidłowy
+      </div>
+
+      <select class="select-input" [(ngModel)]="employee.position.id" name="positionName" #positionName="ngModel"
+        required [ngClass]="{ 'red-border-class-for-select': f.submitted && positionName.errors }">
+        <option class="option-container" *ngFor="let p of positions" value="{{ p.id }}">{{ p.positionName }}</option>
+      </select>
+
+      <button [disabled]="loading" class="custom-button">
+        Zatwierdź
+      </button>
+    </form>
+  </div>
+</div>

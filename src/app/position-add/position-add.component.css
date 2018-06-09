@@ -1,0 +1,47 @@
+.header-container {
+    text-align: center;
+    background: #2885C4;
+    padding: 5px 0;
+}
+
+.content-container {
+    padding: 20px;
+    background-color: #57B3F1;
+    overflow: hidden;
+}
+
+.position-create-container {
+    width: 50%;
+    margin: auto;
+}
+
+.input-component {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.input-component:focus::-webkit-input-placeholder {
+    color: #57B3F1;
+}
+
+.custom-button {
+    margin-top: 20px;
+    padding: 1em 3em;
+    display: block;
+    border: none;
+    cursor: pointer;
+    background: #A5F883;
+    color: #003A61;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.custom-button:hover {
+    background: #C8FBB3;
+}
+
+.red-border-class {
+    outline: 3px solid #a94442;
+}

@@ -1,0 +1,22 @@
+.is-active {
+    background-color: #2885C4;
+}
+
+.main-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.light-blue {
+    background: #57B3F1;
+}
+
+.btn {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

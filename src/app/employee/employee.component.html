@@ -1,0 +1,29 @@
+<div class="header-container">
+  <h2>Lista pracowników</h2>
+</div>
+
+<div class="content-container" [@employees]="employees">
+
+  <div class="search-container">
+      <form (ngSubmit)="searchEmployee()" #f="ngForm" action="">
+          <input class="input-component" type="text" placeholder="Szukaj" name="search" [(ngModel)]="search">
+      </form>
+  </div>
+  <table class="emp-table">
+    <tr class="main-row">
+      <th class="col">Pracownik</th>
+      <th class="col">Email</th>
+      <th class="col">Stanowisko</th>
+      <th class="col" style="width: 5% !important;"></th>
+    </tr>
+    <tr class="row" *ngFor="let employee of employees">
+        <td class="col">{{ employee.firstName }} {{ employee.lastName }}</td>
+        <td class="col">{{ employee.email }}</td>
+        <td class="col">{{ employee.position.positionName }}</td>
+        <td class="col" style="width: 5% !important;">
+          <a class="btn" (click)="deleteEmployee(employee.id)"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+  </table>
+    
+</div>
