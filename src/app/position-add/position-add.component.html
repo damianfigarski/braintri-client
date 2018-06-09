@@ -8,7 +8,7 @@
       <input class="input-component" type="text" placeholder="Stanowisko" name="positionName" [(ngModel)]="position.positionName"
         #positionName="ngModel" required [ngClass]="{ 'red-border-class': f.submitted && positionName.errors }">
 
-      <button [disabled]="loading" class="custom-button">
+      <button class="custom-button">
         Zatwierdź
       </button>
     </form>
